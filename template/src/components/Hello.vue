@@ -8,10 +8,9 @@
 export default {
   data () {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
+      // Note: modifying `msg` below will not cause changes to occur with
+      // hot-reload. As reloaded components preserve their initial state,
+      // modifying these values will have no effect.
       msg: 'Hello World!'
     }
   }
