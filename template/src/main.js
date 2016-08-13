@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-/* eslint-disable no-new */
-new Vue({
+new Vue({ // eslint-disable-line no-new
   el: 'body',
-  components: { App }
+  render: (h) => h(App)
 })
