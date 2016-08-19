@@ -9,7 +9,7 @@
     "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
     "serve": "http-server -c 1 -a localhost",
     "dev": "npm-run-all --parallel watchify serve",
-    "build": "cross-env NODE_ENV=production browserify -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
+    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
     "lint": "eslint --ext .js,.vue src test/unit",
     "test": "karma start karma.conf.js"
   },
@@ -20,7 +20,7 @@
     ]
   },
   "dependencies": {
-    "vue": "^1.0.0"
+    "vue": "^2.0.0-rc.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -29,23 +29,27 @@
     "babel-preset-stage-2": "^6.0.0",
     "babel-runtime": "^6.0.0",
     "babelify": "^7.2.0",
-    "browserify": "^12.0.1",
+    "browserify": "^13.1.0",
     "browserify-hmr": "^0.3.1",
-    "cross-env": "^1.0.5",
-    "eslint": "^1.10.3",
-    "eslint-plugin-html": "^1.1.0",
+    "cross-env": "^2.0.0",
+    "envify": "^3.4.1",
+    "eslint": "^3.3.0",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-html": "^1.5.2",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
-    "karma": "^0.13.15",
-    "karma-browserify": "^4.4.2",
-    "karma-jasmine": "^0.3.6",
+    "karma": "^1.2.0",
+    "karma-browserify": "^5.1.0",
+    "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.0",
-    "karma-spec-reporter": "0.0.23",
-    "npm-run-all": "^1.6.0",
+    "karma-spec-reporter": "0.0.26",
+    "npm-run-all": "^2.3.0",
     "phantomjs-prebuilt": "^2.1.3",
     "proxyquireify": "^3.0.1",
     "uglify-js": "^2.5.0",
-    "vueify": "^8.5.2",
+    "vueify": "^9.0.0",
     "watchify": "^3.4.0"
   }
 }
