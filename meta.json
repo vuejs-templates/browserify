@@ -34,6 +34,13 @@
           "short": "standalone"
         }
       ]
-    }
+    },
+    "lint": {
+      "type": "confirm",
+      "message": "Use ESLint to lint your code?"
+    },
+    "unit": {
+      "type": "confirm",
+      "message": "Setup unit tests with Karma + Mocha?"
   }
 }
