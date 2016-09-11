@@ -1,5 +1,5 @@
 {
-  "schema": {
+  "prompts": {
     "name": {
       "type": "string",
       "required": true,
@@ -42,5 +42,11 @@
     "unit": {
       "type": "confirm",
       "message": "Setup unit tests with Karma + Mocha?"
+    }
+  },
+  "filters": {
+    ".eslintrc.js": "lint",
+    "test/unit/**/*": "unit",
+    "test/e2e/**/*": "e2e"
   }
 }
