@@ -18,6 +18,22 @@
     "private": {
       "type": "boolean",
       "default": true
-    }
+    },
+    "build": {
+      "type": "list",
+      "Message": "Vue comes in two build versions, which do you want to use?",
+      "choices": [
+        {
+          "name": "Runtime-only: lighter, but no support for templates defined in .html files (.vue files are fine)",
+          "value": "runtime",
+          "short": "tuntime"
+        },
+        {
+          "name": "Standalone: heavier, because it includes the template parser to allow template in .html files",
+          "value": "standalone",
+          "short": "standalone"
+        }
+      ]
+    },
   }
 }
