@@ -11,7 +11,7 @@
     "dev": "npm-run-all --parallel watchify serve",
     "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
     {{#lint}}
-    "lint": "eslint --ext .js,.vue src test/unit",
+    "lint": "eslint --ext .js,.vue src{{#test}} test/unit{{/test}}",
     {{/lint}}
     {{#test}}
     "test": "karma start karma.conf.js"
