@@ -15,10 +15,6 @@
       "type": "string",
       "label": "Author"
     },
-    "private": {
-      "type": "boolean",
-      "default": true
-    },
     "build": {
       "type": "list",
       "message": "Vue comes in two build versions, which do you want to use?",

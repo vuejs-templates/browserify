@@ -2,9 +2,7 @@
   "name": "{{ name }}",
   "description": "{{ description }}",
   "author": "{{ author }}",
-  {{#private}}
   "private": true,
-  {{/private}}
   "scripts": {
     "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
     "serve": "http-server -o -c 1 -a localhost",
