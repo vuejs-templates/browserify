@@ -17,11 +17,11 @@
   },
   "browserify": {
     "transform": [
+      "babelify",
       {{#if_eq build "standalone"}}
       "aliasify",
       {{/if_eq}}
-      "vueify",
-      "babelify"
+      "vueify"
     ]
   },
   {{#if_eq build "standalone"}}
