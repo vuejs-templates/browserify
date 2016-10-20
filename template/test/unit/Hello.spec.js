@@ -7,7 +7,7 @@ describe('Hello.vue', () => {
       el: document.createElement('div'),
       render: (h) => h(Hello)
     })
-    expect(vm.$el.querySelector('.hello h1').textContent).toBe('Hello Vue!')
+    expect(vm.$el.querySelector('h1').textContent).toBe('Welcome to Your Vue.js App')
   })
 })
 
