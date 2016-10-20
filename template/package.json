@@ -17,14 +17,17 @@
   },
   "browserify": {
     "transform": [
-      "vueify",
-      "babelify"
+      "babelify",
+      {{#if_eq build "standalone"}}
+      "aliasify",
+      {{/if_eq}}
+      "vueify"
     ]
   },
   {{#if_eq build "standalone"}}
   "aliasify": {
     "aliases": {
-      "vue": "vue/dist/vue"
+      "vue$": "vue/dist/vue"
     }
   },
   {{/if_eq}}
