@@ -24,7 +24,7 @@
   },
   {{#if_eq build "standalone"}}
   "browser": {
-    "vue": "vue/dist/vue"
+    "vue": "vue/dist/vue.common.js"
   },
   {{/if_eq}}
   "dependencies": {
