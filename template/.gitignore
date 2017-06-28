@@ -4,3 +4,10 @@ dist/build.js
 dist/build.css
 yarn-error.log
 npm-debug.log
+
+# Editor directories and files
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
