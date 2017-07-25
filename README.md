@@ -13,6 +13,7 @@ $ npm install -g vue-cli
 $ vue init browserify my-project
 $ cd my-project
 $ npm install
+$ npm build
 $ npm run dev
 ```
 
