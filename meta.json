@@ -43,7 +43,7 @@
     },
     "unit": {
       "type": "confirm",
-      "message": "Setup unit tests with Karma + Mocha?"
+      "message": "Setup unit tests with Karma + Jasmine?"
     }
   },
   "filters": {
