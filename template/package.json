@@ -5,7 +5,7 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
-    "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
+    "watchify": "mkdirp dist && watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
     "serve": "http-server -o -c 1 -a localhost",
     "dev": "npm-run-all --parallel watchify serve",
     {{#lint}}
@@ -14,7 +14,7 @@
     {{#unit}}
     "test": "karma start karma.conf.js",
     {{/unit}}
-    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js"
+    "build": "mkdirp dist && cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js"
   },
   "browserify": {
     "transform": [
@@ -57,6 +57,7 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-spec-reporter": "0.0.26",
     {{/unit}}
+    "mkdirp": "^0.5.1",
     "npm-run-all": "^2.3.0",
     {{#unit}}
     "phantomjs-prebuilt": "^2.1.3",
