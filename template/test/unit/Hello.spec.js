@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import Hello from '../../src/components/Hello.vue'
+import HelloWorld from '../../src/components/HelloWorld.vue'
 
-describe('Hello.vue', () => {
+describe('HelloWorld.vue', () => {
   it('should render correct contents', () => {
     const vm = new Vue({
       el: document.createElement('div'),
-      render: (h) => h(Hello)
+      render: (h) => h(HelloWorld)
     })
     expect(vm.$el.querySelector('h1').textContent).toBe('Welcome to Your Vue.js App')
   })
