@@ -48,8 +48,7 @@
   },
   "filters": {
     ".eslintrc.js": "lint",
-    "test/unit/**/*": "unit",
-    "test/e2e/**/*": "e2e"
+    "test/unit/**/*": "unit"
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev"
 }
